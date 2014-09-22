@@ -46,7 +46,7 @@ unlessM :: (Functor m, Monad m) => m Bool -> m () -> m ()
 unlessM cond action = whenM (not <$> cond) action
 
 -- post-composition with a pure function, useful when used with `>=>`
-(>>$) :: (Functor f) => (a -> f b) -> (b -> c)
+(>>$) :: (Functor f) => (a -> f b) -> (b -> c) -> (a -> f c)
 f >>$ g = \x -> g <$> f x
 
 (.:) :: (c -> d) -> (a -> b -> c) -> (a -> b -> d)

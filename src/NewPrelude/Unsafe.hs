@@ -5,9 +5,9 @@ module NewPrelude.Unsafe
 , module GHC.Exts
 , module System.IO.Unsafe
 , module Unsafe.Coerce
-, traceShowId
-, traceM
-, traceShowM
+--, traceShowId
+--, traceM
+--, traceShowM
 ) where
 
 import Control.Monad.ST ()
@@ -17,12 +17,12 @@ import GHC.Exts (lazy, inline)
 import System.IO.Unsafe
 import Unsafe.Coerce
 
-traceShowId :: (Show a) => a -> a
-traceShowId a = trace (show a) a
+--traceShowId :: (Show a) => a -> a
+--traceShowId a = trace (show a) a
 
-traceM :: (Monad m) => String -> m ()
-traceM string = trace string $ return ()
+--traceM :: (Monad m) => String -> m ()
+--traceM string = trace string $ return ()
 
-traceShowM :: (Show a, Monad m) => a -> m ()
-traceShowM = traceM . show
+--traceShowM :: (Show a, Monad m) => a -> m ()
+--traceShowM = traceM . show
 

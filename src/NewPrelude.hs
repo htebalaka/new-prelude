@@ -38,7 +38,7 @@ module NewPrelude
   , module System.Mem.StableName
   , module System.Timeout
   , module Text.Read
-  , bool
+--  , bool
   ) where
 
 import Control.Applicative
@@ -79,5 +79,5 @@ import System.Mem.StableName
 import System.Timeout
 import Text.Read (readMaybe, readEither)
 
-bool :: a -> a -> Bool -> a
-bool f t = \case { False -> f ; True -> t }
+--bool :: a -> a -> Bool -> a
+--bool f t = \case { False -> f ; True -> t }
